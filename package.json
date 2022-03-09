@@ -7,8 +7,12 @@
   "private": true,
   "dependencies": {
     "@sap/cds": "^5",
+    "axios": "^0.26.0",
+    "axios-oauth-client": "^1.4.4",
     "express": "^4",
-    "mqtt": "^4.3.6"
+    "mqtt": "^4.3.6",
+    "node-fetch": "^2.6.7",
+    "node-jose": "^2.1.0"
   },
   "devDependencies": {
     "sqlite3": "^5.0.2"

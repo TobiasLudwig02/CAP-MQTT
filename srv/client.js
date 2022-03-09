@@ -24,31 +24,31 @@ module.exports = (endpoint) => {
     client.on("message", async (topic, message) => {
         console.log(`[INFO] Received MQTT message: "${message}"`);
 
-       // const targetCred = await credentials.get("integration-suite");
+        // const targetCred = await credentials.get("integration-suite");
 
         // get bearer token
-       // const authResponse = await oauth.client(axios.create(), {
-         //   url: config.targetTokenUrl,
-           // client_id: targetCred.username,
-//            client_secret: targetCred.password,
-//            grant_type: "client_credentials"
-//        })();
+        //const authResponse = await oauth.client(axios.create(), {
+          //  url: config.targetTokenUrl,
+            //client_id: targetCred.username,
+            //client_secret: targetCred.password,
+            //grant_type: "client_credentials"
+        //})();
 
         // invoke integration flow
- //       try {
-//            const response = await axios.post(config.targetUrl, message, {
-//                headers: {
-//                    "Authorization": `Bearer ${authResponse.access_token}`,
-//                    "Content-Type": "text/plain"
-//              },
-//
-//                httpsAgent: targetAgent
-//            });
-//            console.log(`[INFO] Successfully invoked integration flow: Received response "${response.data}"`);
+        //try {
+          //  const response = await axios.post(config.targetUrl, message, {
+            //    headers: {
+              //      "Authorization": `Bearer ${authResponse.access_token}`,
+                //    "Content-Type": "text/plain"
+              //},
 
-//        } catch (error) {
-//            console.error(`[ERROR] Failed to invoke integration flow: ${error}`);
-//        }
+                //httpsAgent: targetAgent
+            //});
+            //console.log(`[INFO] Successfully invoked integration flow: Received response "${response.data}"`);
+
+  //      } catch (error) {
+    //        console.error(`[ERROR] Failed to invoke integration flow: ${error}`);
+      //  }
     });
 
     // OData functions
