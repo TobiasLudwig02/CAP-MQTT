@@ -9,11 +9,21 @@ module.exports = (endpoint) => {
 
     const targetAgent = new https.Agent({ maxSockets: 1 });
 
-    const client = mqtt.connect("mqtt://broker.hivemq.com");
+var mqtt = require('mqtt')
+
+var options = {
+    host: '5bde9f0bef7242b387df809c54c48b55.s2.eu.hivemq.cloud',
+    port: 8883,
+    protocol: 'mqtts',
+    username: 'MQTTCluster',
+    password: 'MQtt1234'
+}
+
+    const client = mqtt.connect(options);
 
     client.on("connect", () => {
         console.log("[INFO] Connected to MQTT broker");
-        client.subscribe("presence");
+        client.subscribe("testTopic");
     });
     client.on("error", (error) => {
         console.error(`[ERROR] Connection couldn't be established: ${error}`);
